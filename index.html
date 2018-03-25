@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<ul>
+			{{each myMsg}}
+				<li>{{$value.name}} 说: {{$value.msg}}</li>
+			{{/each}}
+		</ul>
+	</div>
+
+	<form  action="/sendMsg" method="post" >
+		<input type="text" name="name"> 说:
+		<input type="text" name="msg">
+		<button>发送</button>
+	</form>
+</body>
+</html>
